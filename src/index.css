@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Premium Reveal Animation for Heading */
+@keyframes revealUp {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Base fade-in keyframes for non-scroll components */
+@keyframes fadeInSimple {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-text-reveal {
+  animation: revealUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-delayed {
+  opacity: 0;
+  animation: fadeInSimple 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+.animate-icons-delayed {
+  opacity: 0;
+  animation: fadeInSimple 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+}
+
+/* Subtle engineering grid texture */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(63, 63, 70, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(63, 63, 70, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
